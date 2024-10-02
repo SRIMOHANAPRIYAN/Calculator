@@ -1,0 +1,90 @@
+/* Background for the whole page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #83a4d4, #b6fbff);
+    font-family: 'Arial', sans-serif;
+}
+
+.calculator {
+    display: grid;
+    gap: 15px;
+    background: #222;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 320px;
+}
+
+#display {
+    grid-column: span 4;
+    height: 30px;
+    font-size: 21px;
+    text-align: right;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #111;
+    color: #0f0;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 22px;
+    border: none;
+    border-radius: 12px;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button.operator {
+    background-color: #f57c00;
+    color: white;
+}
+
+button.special {
+    background-color: #d32f2f;
+    color: white;
+}
+
+button.equal {
+    background-color: #4caf50;
+    color: white;
+    grid-column: span 1;
+}
+
+button.zero-btn {
+    grid-column: span 2;
+}
+
+button.zero-btn, button.operator, button.equal, button.special {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button.zero-btn:hover, button.operator:hover, button.equal:hover, button.special:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
